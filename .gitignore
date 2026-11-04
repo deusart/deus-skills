@@ -3,6 +3,7 @@ node_modules/
 Thumbs.db
 *.log
 **/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
 **/.obsidian/cache
 **/.obsidian/plugins/
 archive/

@@ -114,11 +114,14 @@ Bases и Dataview используются, только если проект �
 
 ## .obsidian
 
-Коммитятся: `app.json`, `appearance.json`, `core-plugins.json`, `community-plugins.json`.
-Не коммитятся: `workspace.json`, кэш и папки `plugins/*` с кодом плагинов.
+Коммитятся: `app.json`, `appearance.json`, `core-plugins.json`, `community-plugins.json`,
+`themes/*`. Не коммитятся: `workspace.json`, `workspace-mobile.json`, кэш и папки
+`plugins/*` с кодом плагинов.
 
 `community-plugins.json` фиксирует, какие плагины нужны проекту. Сам плагин ставится в
 Obsidian вручную, шаги восстановления пишутся в `docs/rules/tools.md`.
 
-Набор по умолчанию: Kanban, Dataview, Minimal Theme Settings, тема Minimal. В
-`appearance.json` это `"theme": "obsidian"` плюс `"cssTheme": "Minimal"`.
+Набор по умолчанию: `obsidian-kanban`, `dataview`, `obsidian-minimal-settings`, тема
+Minimal. В `appearance.json` это `"theme": "obsidian"` плюс `"cssTheme": "Minimal"`.
+Тема лежит в репозитории, поэтому вид восстанавливается сразу, а плагины ставятся один
+раз вручную.

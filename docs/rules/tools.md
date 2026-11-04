@@ -20,14 +20,16 @@ Minimal. Ставится через Settings → Appearance → Themes → Mana
 
 | Плагин | Идентификатор | Зачем |
 |--------|---------------|-------|
-| Kanban | `kanban` | доска `docs/tasks/board.md` |
+| Kanban | `obsidian-kanban` | доска `docs/tasks/board.md` |
 | Dataview | `dataview` | запросы по паспортам документов |
 | Minimal Theme Settings | `obsidian-minimal-settings` | настройки темы Minimal |
 
-Список зафиксирован в `docs/.obsidian/community-plugins.json`.
+Список зафиксирован в `docs/.obsidian/community-plugins.json`. Тема Minimal лежит в
+репозитории целиком: `docs/.obsidian/themes/Minimal`.
 
 ## Установка
 
 Settings → Community plugins → Browse → найти по идентификатору, установить, включить.
-Код плагинов и тема в репозиторий не коммитятся: после клонирования они ставятся один
-раз вручную. Без них страницы открываются как обычный markdown, данные не теряются.
+Тема Minimal уже в репозитории, ставить её не нужно. Код плагинов не коммитится: после
+клонирования они ставятся один раз вручную. Без них страницы открываются как обычный
+markdown, данные не теряются.
