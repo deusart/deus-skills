@@ -7,6 +7,8 @@
 | Путь | Назначение |
 |------|------------|
 | [skills/deus-architect](skills/deus-architect/SKILL.md) | архитектор солюшна |
+| [skills/deus-de](skills/deus-de/SKILL.md) | инженер данных: пайплайны, хранилище, dbt, Airflow |
+| [skills/deus-devops](skills/deus-devops/SKILL.md) | инфраструктура: окружения, CI/CD, секреты, бэкапы |
 | [archive/deus-architect-v1](archive/deus-architect-v1/SKILL.md) | первая версия, сохранена как история |
 | [docs/rules](docs/rules/naming-convention.md) | правила репозитория |
 | [tools](tools/check-docs.mjs) | проверка документации и скиллов |
