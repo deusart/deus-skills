@@ -119,3 +119,6 @@ Bases и Dataview используются, только если проект �
 
 `community-plugins.json` фиксирует, какие плагины нужны проекту. Сам плагин ставится в
 Obsidian вручную, шаги восстановления пишутся в `docs/rules/tools.md`.
+
+Набор по умолчанию: Kanban, Dataview, Minimal Theme Settings, тема Minimal. В
+`appearance.json` это `"theme": "obsidian"` плюс `"cssTheme": "Minimal"`.
