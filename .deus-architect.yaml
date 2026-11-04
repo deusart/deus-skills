@@ -1,0 +1,8 @@
+skill: deus-architect
+skill_version: 2
+level: medium
+checked_at: 2026-11-04
+domains: {naming: done, structure: done, git: done, agents: done, docs: done}
+artifacts: {naming: docs/rules/naming-convention.md, index: docs/index.md, agents: AGENTS.md}
+reviews: []
+open: [origin-not-created, board-not-created]
