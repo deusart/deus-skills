@@ -236,13 +236,14 @@ function main() {
 
       const isIndex = rel === 'index.md';
       const isConcept = rel.startsWith('concept/');
+      const isBoard = rel === 'tasks/board.md';
       const { data, body } = parseFrontmatter(text);
 
       if (!data) {
-        if (!isIndex && !isConcept && level !== 'small') fail(rel, 'нет паспорта: frontmatter отсутствует');
+        if (!isIndex && !isConcept && !isBoard && level !== 'small') fail(rel, 'нет паспорта: frontmatter отсутствует');
         continue;
       }
-      if (isIndex || isConcept) continue;
+      if (isIndex || isConcept || isBoard) continue;
 
       for (const field of REQUIRED_FIELDS) {
         if (!data[field]) fail(rel, `паспорт: нет поля ${field}`);
@@ -288,7 +289,7 @@ function main() {
       }
       for (const file of walk(docsDir).filter((f) => f.endsWith('.md'))) {
         const rel = toPosix(relative(docsDir, file));
-        if (rel === 'index.md') continue;
+        if (rel === 'index.md' || rel === 'tasks/board.md') continue;
         const name = basename(file);
         if (!indexText.includes(rel) && !indexText.includes(name)) {
           fail(rel, 'нет строки в docs/index.md');

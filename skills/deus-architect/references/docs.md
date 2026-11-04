@@ -77,19 +77,30 @@ related: [ADR-0001, RULE-001]
 Индекс ведёт агент, проверяет `tools/check-docs.mjs`: каждый документ имеет строку,
 каждая строка ведёт в живой файл.
 
-## Виды
+## Доска
 
-Статусы наружу выводит Bases, встроенный плагин Obsidian, файл `.base`:
+`docs/tasks/board.md`, плагин Kanban. Колонки Backlog, Ready, Doing, Done. Файл
+начинается с `kanban-plugin: board`, паспорта не имеет и в индекс не входит.
 
 ```
-docs/tasks/board.base    # колонки по status: backlog, ready, doing, done
-docs/views/*.base        # по потребности
+---
+kanban-plugin: board
+---
+
+## Backlog
+
+## Ready
+
+## Doing
+
+## Done
 ```
 
-Dataview только если проект уже на нём. Плагин не ставится ради вида.
+Bases и Dataview используются, только если проект уже на них. Плагин не ставится ради
+доски.
 
-Вид это удобство для человека. Obsidian видит запрос, агент и CI видят frontmatter,
-поэтому проверяется паспорт.
+Доска это удобство для человека. Obsidian видит плагин, агент и CI видят файл, поэтому
+проверяется наличие доски, а не её вид.
 
 ## Ревью
 
@@ -103,7 +114,8 @@ Dataview только если проект уже на нём. Плагин н�
 
 ## .obsidian
 
-Коммитятся: `app.json`, `appearance.json`, `core-plugins.json`, `types.json`.
-Не коммитятся: `workspace.json`, кэш, `plugins/*/data.json` с токенами.
-Внешние плагины только те, что уже используются. Установка описана в
-`docs/rules/tools.md` с шагами восстановления.
+Коммитятся: `app.json`, `appearance.json`, `core-plugins.json`, `community-plugins.json`.
+Не коммитятся: `workspace.json`, кэш и папки `plugins/*` с кодом плагинов.
+
+`community-plugins.json` фиксирует, какие плагины нужны проекту. Сам плагин ставится в
+Obsidian вручную, шаги восстановления пишутся в `docs/rules/tools.md`.
