@@ -1,0 +1,15 @@
+{
+  "newFileLocation": "folder",
+  "newFileFolderPath": "docs",
+  "userIgnoreFilters": [
+    "archive/",
+    "skills/",
+    "tools/",
+    "src/",
+    ".gitignore",
+    ".gitattributes",
+    ".deus-architect.yaml",
+    "AGENTS.md",
+    "README.md"
+  ]
+}

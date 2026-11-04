@@ -9,12 +9,14 @@ date: 2026-11-04
 
 # Расширения Obsidian
 
-Vault `docs/` рассчитан на три расширения и тему Minimal.
+Vault это корень проекта, заметки лежат в `docs/`. Конфигурация в `.obsidian/` рядом с
+`README.md`. Так имя vault совпадает с именем проекта, а пути `docs/rules`, `docs/specs`
+и `docs/index.md` остаются прежними.
 
 ## Тема
 
-Minimal. Ставится через Settings → Appearance → Themes → Manage → Minimal. Выбор темы
-зафиксирован в `docs/.obsidian/appearance.json`.
+Minimal. Выбор зафиксирован в `.obsidian/appearance.json`: `"theme": "obsidian"`,
+`"cssTheme": "Minimal"`. Тема лежит в репозитории целиком, `.obsidian/themes/Minimal`.
 
 ## Расширения
 
@@ -24,12 +26,18 @@ Minimal. Ставится через Settings → Appearance → Themes → Mana
 | Dataview | `dataview` | запросы по паспортам документов |
 | Minimal Theme Settings | `obsidian-minimal-settings` | настройки темы Minimal |
 
-Список зафиксирован в `docs/.obsidian/community-plugins.json`. Тема Minimal лежит в
-репозитории целиком: `docs/.obsidian/themes/Minimal`.
+Список зафиксирован в `.obsidian/community-plugins.json`.
+
+## Фильтры
+
+Obsidian не индексирует код и служебные файлы. Список в `.obsidian/app.json` →
+`userIgnoreFilters`: `archive/`, `skills/`, `tools/`, `src/`, `AGENTS.md`, `README.md`,
+`.gitignore`, `.gitattributes`, `.deus-architect.yaml`. Новые заметки по умолчанию
+создаются в `docs/` (`newFileFolderPath`).
 
 ## Установка
 
 Settings → Community plugins → Browse → найти по идентификатору, установить, включить.
-Тема Minimal уже в репозитории, ставить её не нужно. Код плагинов не коммитится: после
+Тема уже в репозитории, ставить её не нужно. Код плагинов не коммитится: после
 клонирования они ставятся один раз вручную. Без них страницы открываются как обычный
 markdown, данные не теряются.

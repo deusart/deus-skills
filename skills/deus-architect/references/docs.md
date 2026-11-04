@@ -114,6 +114,12 @@ Bases и Dataview используются, только если проект �
 
 ## .obsidian
 
+Vault открывается от корня проекта, заметки живут в `docs/`, конфигурация в `.obsidian/`
+рядом с `README.md`. Иначе каждый проект назывался бы `docs` в переключателе vault.
+
+`app.json` задаёт `newFileFolderPath: "docs"` и `userIgnoreFilters`: код и служебные
+файлы Obsidian не индексирует.
+
 Коммитятся: `app.json`, `appearance.json`, `core-plugins.json`, `community-plugins.json`,
 `themes/*`. Не коммитятся: `workspace.json`, `workspace-mobile.json`, кэш и папки
 `plugins/*` с кодом плагинов.
